@@ -18,7 +18,7 @@ Assist News is a custom Home Assistant integration that lets Assist read top sto
 
 ### HACS (recommended)
 
-[![Open Assist News in HACS](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?repository=https%3A%2F%2Fgithub.com%2Fplplaaa2%2Fassist_naver_news&category=integration)
+[![Open your Home Assistant instance and open a repository in the Marketplace.](https://my.home-assistant.io/badges/marketplace_repository.svg)](https://my.home-assistant.io/redirect/marketplace_repository/?owner=plplaaa2&repository=assist_naver_news&category=integration)
 
 You can also add the [Assist News repository](https://github.com/plplaaa2/assist_naver_news) as a custom HACS repository in the **Integration** category. Install Assist News, then restart Home Assistant.
 

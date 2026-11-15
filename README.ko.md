@@ -18,7 +18,7 @@ Assist News는 네이버 언론사별 주요 뉴스를 Home Assistant Assist에�
 
 ### HACS 설치 (권장)
 
-[![HACS에서 Assist News 열기](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?repository=https%3A%2F%2Fgithub.com%2Fplplaaa2%2Fassist_naver_news&category=integration)
+[![Home Assistant Marketplace에서 Assist News 열기](https://my.home-assistant.io/badges/marketplace_repository.svg)](https://my.home-assistant.io/redirect/marketplace_repository/?owner=plplaaa2&repository=assist_naver_news&category=integration)
 
 HACS에서 직접 추가하려면 [Assist News 저장소](https://github.com/plplaaa2/assist_naver_news)를 사용자 지정 저장소에 등록하고 유형으로 **통합**을 선택합니다. Assist News를 설치한 뒤 Home Assistant를 재시작합니다.
 
