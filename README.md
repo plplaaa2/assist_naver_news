@@ -52,3 +52,7 @@ Copy the `custom_components/assist_news/` directory into `custom_components/` un
 - “Read three top stories from Yonhap News.”
 - “Read today’s headlines like a news anchor.”
 - “Give me the link to the first article.”
+
+## License
+
+The Assist News project code is licensed under the [MIT License](LICENSE).

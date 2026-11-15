@@ -5,6 +5,7 @@
 ├── .github/
 │   └── workflows/
 │       └── marketplace.yml
+├── LICENSE
 ├── README.md
 ├── README.ko.md
 ├── hacs.json

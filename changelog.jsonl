@@ -28,3 +28,4 @@
 {"version":"dev-0.1.27","date":"2026-11-15","changes":["Aligned the Korean README installation badge with the Home Assistant Marketplace badge in the English README."]}
 {"version":"dev-0.1.28","date":"2026-11-15","changes":["Added the Marketplace validation workflow with HACS and hassfest checks."]}
 {"version":"dev-0.1.29","date":"2026-11-15","changes":["Added a news article copyright notice to both READMEs."]}
+{"version":"dev-0.1.30","date":"2026-11-15","changes":["Licensed the project code under MIT and linked the license from both READMEs."]}
