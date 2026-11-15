@@ -2,6 +2,10 @@
 
 ```text
 .
+├── .github/
+│   └── workflows/
+│       └── marketplace.yml
+├── LICENSE
 ├── README.md
 ├── README.ko.md
 ├── hacs.json
@@ -12,6 +16,8 @@
         ├── config_flow.py
         ├── const.py
         ├── api.py
+        ├── brand/
+        │   └── icon.png
         ├── manifest.json
         ├── news.py
         └── strings.json

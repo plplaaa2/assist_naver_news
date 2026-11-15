@@ -8,6 +8,8 @@
 
 Assist News is a custom Home Assistant integration that lets Assist read top stories from Naver News publishers.
 
+Copyright in each news article belongs to its respective publisher.
+
 ## Features
 
 - Register multiple Naver News publishers and enable each as a separate Assist tool provider.
@@ -50,3 +52,7 @@ Copy the `custom_components/assist_news/` directory into `custom_components/` un
 - “Read three top stories from Yonhap News.”
 - “Read today’s headlines like a news anchor.”
 - “Give me the link to the first article.”
+
+## License
+
+The Assist News project code is licensed under the [MIT License](LICENSE).

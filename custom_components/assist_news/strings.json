@@ -3,7 +3,7 @@
     "step": {
       "user": {
         "title": "네이버 뉴스 언론사 추가",
-        "description": "네이버 언론사 홈 주소의 숫자 ID를 입력하세요. 예: https://media.naver.com/press/001 → 001",
+        "description": "네이버 언론사 홈 주소에서 /press/ 바로 뒤의 숫자를 입력하세요. 연합뉴스의 언론사 ID는 001입니다.",
         "data": {
           "press_id": "언론사 ID",
           "news_count": "주요 기사 수 (기본 12, 1~30개)",
