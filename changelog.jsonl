@@ -22,3 +22,4 @@
 {"version":"dev-0.1.21","date":"2026-10-18","changes":["Simplified the news tool result to an articles array with per-article title, time, body, and link fields, removing redundant top-level metadata."]}
 {"version":"dev-0.1.22","date":"2026-10-18","changes":["Changed the news tool result to a structured text block with explicit per-article title, time, body, and link labels."]}
 {"version":"dev-0.1.23","date":"2026-10-18","changes":["Reverted the news tool response to its original JSON structure after structured-text output did not improve model summaries."]}
+{"version":"dev-0.1.24","date":"2026-11-15","changes":["Made calm news anchor delivery the default for spoken briefs, with short formal Korean sentences and transitions between articles."]}

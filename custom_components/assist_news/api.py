@@ -106,12 +106,18 @@ class GetMajorNewsTool(Tool):
         self.briefing_chars = briefing_chars
         self.name = f"{DOMAIN}__get_{press_id}_major_news"
         self.title = f"{press_name} 주요 뉴스"
+        # Guide spoken briefs in a news anchor style. Related: README.md.
         self.description = (
             f"Fetch up to {news_count} major news articles from Naver {press_name}. "
             f"Each article includes its original title, time, and body (up to {body_chars:,} characters). "
             "Use each title exactly as provided; do not paraphrase or edit it. "
             f"Summarize only the body in about {briefing_chars:,} Korean characters or fewer. "
             "Do not infer or add details that are not stated in the body. "
+            "By default, deliver spoken briefings like a calm, neutral news anchor. "
+            "Use short sentences and formal polite endings in Korean. "
+            "When reading multiple articles, use brief natural transitions such as "
+            "'첫 소식입니다' and '이어서 다음 소식입니다' where appropriate. "
+            "Follow the user's requested delivery style if specified. "
             "Provide article links only when explicitly requested. "
             "Respond in the user's language; use Korean when the user asks in Korean."
         )
