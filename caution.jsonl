@@ -1,0 +1,2 @@
+{"date":"2026-10-17","note":"Replace the placeholder GitHub owner in manifest.json before publishing the repository."}
+{"date":"2026-10-15","category":"provider_registration","note":"An async_get_tools platform hook contributes tools to an existing API but does not register a selectable provider. Register an API with async_register_api and bind its unregister callback with entry.async_on_unload. Test registry visibility and cleanup in addition to tool calls. Windows doubles do not verify the actual frontend selector; runtime HA verification remains necessary."}

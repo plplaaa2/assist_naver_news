@@ -1,0 +1,24 @@
+{"version":"dev-0.1.0","date":"2026-10-17","changes":["Created the initial HACS custom integration scaffold for Assist Memo."]}
+{"version":"dev-0.1.1","date":"2026-10-17","changes":["Renamed the integration identity from Assist Memo to Assist News and updated its domain to assist_news."]}
+{"version":"dev-0.1.2","date":"2026-10-17","changes":["Added an Assist LLM tool that parses up to 12 major headlines from Naver's Yonhap News press page."]}
+{"version":"dev-0.1.3","date":"2026-10-17","changes":["Added multi-publisher config entries using Naver press IDs, per-publisher Assist tools, duplicate prevention, and migration for the original Yonhap entry."]}
+{"version":"dev-0.1.4","date":"2026-10-17","changes":["Added extraction of up to 1,000 characters of article body text per major headline for Assist LLM summaries, with article requests limited to three concurrent fetches."]}
+{"version":"dev-0.1.5","date":"2026-10-17","changes":["Made the per-article body character limit configurable during publisher setup and through the options flow, defaulting to 1,000 characters."]}
+{"version":"dev-0.1.6","date":"2026-10-17","changes":["Added a per-publisher article briefing length setting to config and options flows, defaulting to 100 characters, and included the target length in Assist prompts."]}
+{"version":"dev-0.1.7","date":"2026-10-17","changes":["Changed each configured publisher into a selectable LLM API registered with async_register_api and unregistered on entry unload; corrected integration_type to service."]}
+{"version":"dev-0.1.8","date":"2026-10-17","changes":["Updated Assist guidance to omit article links by default and provide them only when explicitly requested."]}
+{"version":"dev-0.1.9","date":"2026-10-17","changes":["Removed overlapping briefing guidance from the API prompt and consolidated article count and configured text limits in the dynamic tool description."]}
+{"version":"dev-0.1.10","date":"2026-10-17","changes":["Instructed Assist to preserve each article's original title and summarize only the body in a complete, factual sentence within the configured briefing length."]}
+{"version":"dev-0.1.11","date":"2026-10-17","changes":["Made the number of major news articles configurable per publisher from 1 to 30, defaulting to 12, and applied it to the tool description and fetch limit."]}
+{"version":"dev-0.1.12","date":"2026-10-17","changes":["Cleaned parsed news titles and article bodies by decoding HTML entities and removing control, zero-width, and decorative symbols while preserving punctuation and Hanja."]}
+{"version":"dev-0.1.13","date":"2026-10-17","changes":["Removed double quotes and literal backslashes from parsed titles and article bodies so JSON tool output does not need to escape embedded double quotes."]}
+{"version":"dev-0.1.14","date":"2026-10-18","changes":["Preserved headline quotation marks and punctuation during parsing; JSON backslash escapes are serialization syntax and are not literal news text."]}
+{"version":"dev-0.1.15","date":"2026-10-18","changes":["Added a final response review instruction to compare copied headlines with tool output and recheck spelling, names, organizations, and numbers against article bodies."]}
+{"version":"dev-0.1.16","date":"2026-10-18","changes":["Simplified the Assist API prompt to: This tool provides news."]}
+{"version":"dev-0.1.17","date":"2026-10-18","changes":["Clarified the tool description to summarize only the article body within approximately the configured briefing character limit."]}
+{"version":"dev-0.1.18","date":"2026-10-18","changes":["Updated the tool description to expose title, time, and body fields without mentioning links, and to request title/body separation with a body-only summary within the configured length."]}
+{"version":"dev-0.1.19","date":"2026-10-18","changes":["Strengthened the tool description to require verbatim headlines, body-grounded summaries without added claims, and links only when requested."]}
+{"version":"dev-0.1.20","date":"2026-10-18","changes":["Translated the Assist API prompt and news tool instructions into English while directing the model to answer in the user's language."]}
+{"version":"dev-0.1.21","date":"2026-10-18","changes":["Simplified the news tool result to an articles array with per-article title, time, body, and link fields, removing redundant top-level metadata."]}
+{"version":"dev-0.1.22","date":"2026-10-18","changes":["Changed the news tool result to a structured text block with explicit per-article title, time, body, and link labels."]}
+{"version":"dev-0.1.23","date":"2026-10-18","changes":["Reverted the news tool response to its original JSON structure after structured-text output did not improve model summaries."]}

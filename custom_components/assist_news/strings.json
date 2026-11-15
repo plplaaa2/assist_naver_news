@@ -1,0 +1,36 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "네이버 뉴스 언론사 추가",
+        "description": "네이버 언론사 홈 주소의 숫자 ID를 입력하세요. 예: https://media.naver.com/press/001 → 001",
+        "data": {
+          "press_id": "언론사 ID",
+          "news_count": "주요 기사 수 (기본 12, 1~30개)",
+          "article_body_chars": "기사 본문 최대 글자 수 (기본 1000)",
+          "briefing_chars": "기사별 요약 브리핑 글자 수 (기본 100)"
+        }
+      }
+    },
+    "error": {
+      "invalid_press_id": "언론사 ID는 숫자여야 합니다.",
+      "cannot_connect": "해당 네이버 언론사 페이지에 연결할 수 없습니다. ID를 확인해 주세요."
+    },
+    "abort": {
+      "already_configured": "이 언론사는 이미 추가되어 있습니다."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "기사 수와 텍스트 길이 설정",
+        "description": "가져올 기사 수와 기사 본문·브리핑 길이를 설정합니다. 기본값은 기사 12개, 본문 1000자, 브리핑 100자입니다.",
+        "data": {
+          "news_count": "주요 기사 수 (1~30개)",
+          "article_body_chars": "기사 본문 최대 글자 수",
+          "briefing_chars": "기사별 요약 브리핑 글자 수"
+        }
+      }
+    }
+  }
+}
