@@ -4,6 +4,7 @@
 
 [![HACS Custom](https://img.shields.io/badge/HACS-Custom-41BDF5.svg?style=for-the-badge)](https://github.com/hacs/integration)
 ![버전 1.0.0](https://img.shields.io/badge/version-v1.0.0-blue.svg?style=for-the-badge)
+[![Ko-fi](https://img.shields.io/badge/Ko--fi-Support%20Me-F16061?style=for-the-badge&logo=ko-fi)](https://ko-fi.com/plplaaa2)
 
 Assist News는 네이버 언론사별 주요 뉴스를 Home Assistant Assist에서 들을 수 있게 해주는 HACS 사용자 정의 통합입니다.
 
@@ -26,6 +27,13 @@ HACS에서 직접 추가하려면 [Assist News 저장소](https://github.com/plp
 `custom_components/assist_news/` 폴더를 Home Assistant 설정 폴더 아래의 `custom_components/`에 복사한 뒤 Home Assistant를 재시작합니다.
 
 ## 설정
+
+### 네이버 뉴스 언론사 번호 찾기
+
+1. [네이버 뉴스 언론사 목록](https://media.naver.com/press)에서 원하는 언론사의 이름이나 로고를 누릅니다.
+2. 브라우저 주소창에서 `/press/` 바로 뒤의 숫자를 확인합니다. 예를 들어 [연합뉴스](https://media.naver.com/press/001)의 언론사 ID는 `001`입니다. 앞의 `0`까지 그대로 입력하세요.
+
+### 통합 추가
 
 1. **설정 → 기기 및 서비스 → 통합 추가 → Assist News**에서 네이버 언론사 ID를 입력합니다. 예를 들어 [연합뉴스](https://media.naver.com/press/001)의 ID는 `001`입니다.
 2. 사용할 언론사마다 통합 항목을 추가합니다.
