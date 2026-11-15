@@ -8,6 +8,8 @@
 
 Assist News is a custom Home Assistant integration that lets Assist read top stories from Naver News publishers.
 
+Copyright in each news article belongs to its respective publisher.
+
 ## Features
 
 - Register multiple Naver News publishers and enable each as a separate Assist tool provider.
