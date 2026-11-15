@@ -3,6 +3,7 @@
 ```text
 .
 ├── README.md
+├── README.ko.md
 ├── hacs.json
 ├── tree.md
 └── custom_components/

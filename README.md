@@ -1,26 +1,52 @@
 # Assist News
 
-config flow에서 네이버 뉴스 언론사 ID를 여러 개 등록하고, 각 언론사를 선택 가능한 Home Assistant LLM API 제공자로 등록합니다. 각 제공자는 해당 언론사 주요 뉴스와 본문을 Assist에 전달합니다.
+[English](./README.md) | [한국어](./README.ko.md)
 
-주요 뉴스 도구는 설정한 수의 기사 제목·링크·표시 시각과 본문을 반환합니다. 기사 수, 본문 길이, 기사별 요약 브리핑 길이는 언론사 설정에서 조정할 수 있습니다. 기본값은 기사 12개, 본문 1,000자, 브리핑 100자입니다.
+[![HACS Custom](https://img.shields.io/badge/HACS-Custom-41BDF5.svg?style=for-the-badge)](https://github.com/hacs/integration)
+![Version 1.0.0](https://img.shields.io/badge/version-v1.0.0-blue.svg?style=for-the-badge)
+[![Ko-fi](https://img.shields.io/badge/Ko--fi-Support%20Me-F16061?style=for-the-badge&logo=ko-fi)](https://ko-fi.com/plplaaa2)
 
-음성 응답은 기본적으로 기사 제목과 브리핑만 말합니다. 사용자가 링크를 요청한 경우에만 기사 링크를 응답합니다.
+Assist News is a custom Home Assistant integration that lets Assist read top stories from Naver News publishers.
 
-설정한 기사 본문 및 브리핑 글자 수는 Assist 도구 설명에 자동 반영됩니다.
-기사 제목은 원문 그대로 표시하고, 본문만 설정된 길이로 요약합니다.
-파싱할 때 HTML 엔티티와 제어·제로폭·장식 문자를 정리하며, 한자와 문장부호는 보존합니다.
+## Features
 
-## 설치
+- Register multiple Naver News publishers and enable each as a separate Assist tool provider.
+- Hear original headlines and short summaries in a calm news anchor style by default. You can also request a different delivery style.
+- Ask for article links when you want them.
 
-HACS에서 **Custom repositories**로 이 공개 GitHub 저장소를 추가하고 유형을 **Integration**으로 선택합니다. 설치 후 Home Assistant를 재시작하고, 설정에서 통합을 추가합니다.
+## Installation
 
-## 개발 상태
+### HACS (recommended)
 
-- 통합 도메인: `assist_news`
-- Assist 도구 이름: `assist_news__get_<언론사ID>_major_news`
-- 뉴스 출처 형식: `https://media.naver.com/press/<언론사ID>`
-- config flow에서 언론사 ID를 입력해 언론사별 항목 추가
-- 기사 수: 기본 12개 (1~30개 설정 가능)
-- 기사 본문 기본 길이: 기사당 1,000자 (100~10,000자 설정 가능)
-- 기사별 요약 브리핑 기본 길이: 100자 (30~500자 설정 가능)
+[![Open your Home Assistant instance and open a repository in the Marketplace.](https://my.home-assistant.io/badges/marketplace_repository.svg)](https://my.home-assistant.io/redirect/marketplace_repository/?owner=plplaaa2&repository=assist_naver_news&category=integration)
 
+You can also add the [Assist News repository](https://github.com/plplaaa2/assist_naver_news) as a custom HACS repository in the **Integration** category. Install Assist News, then restart Home Assistant.
+
+### Manual installation
+
+Copy the `custom_components/assist_news/` directory into `custom_components/` under your Home Assistant configuration directory, then restart Home Assistant.
+
+## Setup
+
+### Find the Naver News publisher ID
+
+1. Open the [Naver News publisher directory](https://media.naver.com/press) and select the publisher you want.
+2. Copy the digits immediately after `/press/` in the address bar. For [Yonhap News](https://media.naver.com/press/001), the ID is `001`. Keep the leading zeros.
+
+### Add the integration
+
+1. Go to **Settings → Devices & services → Add integration → Assist News** and enter the Naver publisher ID. For example, [Yonhap News](https://media.naver.com/press/001) uses `001`.
+2. Add one integration entry per publisher.
+3. Enable **〈publisher name〉 뉴스** in the tool provider or Home Assistant API settings for the LLM conversation agent used by Assist. Menu names vary by agent.
+
+| Per-publisher setting | Default | Range |
+| --- | ---: | ---: |
+| Number of top stories | 12 | 1–30 |
+| Article body length | 1,000 characters | 100–10,000 |
+| Target summary length per story | 100 characters | 30–500 |
+
+## Example voice requests
+
+- “Read three top stories from Yonhap News.”
+- “Read today’s headlines like a news anchor.”
+- “Give me the link to the first article.”
