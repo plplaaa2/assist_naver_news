@@ -16,6 +16,8 @@
         ├── config_flow.py
         ├── const.py
         ├── api.py
+        ├── brand/
+        │   └── icon.png
         ├── manifest.json
         ├── news.py
         └── strings.json

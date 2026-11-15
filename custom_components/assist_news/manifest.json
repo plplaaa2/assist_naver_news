@@ -1,6 +1,7 @@
 {
   "domain": "assist_news",
   "name": "Assist News",
+  "categories": ["news_social_media"],
   "codeowners": [],
   "config_flow": true,
   "documentation": "https://github.com/plplaaa2/assist_naver_news",
