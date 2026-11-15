@@ -3,9 +3,9 @@
   "name": "Assist News",
   "codeowners": [],
   "config_flow": true,
-  "documentation": "https://github.com/REPLACE_WITH_OWNER/assist_news",
+  "documentation": "https://github.com/plplaaa2/assist_naver_news",
   "integration_type": "service",
   "iot_class": "cloud_polling",
-  "issue_tracker": "https://github.com/REPLACE_WITH_OWNER/assist_news/issues",
-  "version": "0.1.0"
+  "issue_tracker": "https://github.com/plplaaa2/assist_naver_news/issues",
+  "version": "1.0.0"
 }
