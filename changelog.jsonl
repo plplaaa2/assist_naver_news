@@ -26,3 +26,4 @@
 {"version":"dev-0.1.25","date":"2026-11-15","changes":["Added English and Korean installation and setup guides, updated repository links, and set the public integration version to 1.0.0."]}
 {"version":"dev-0.1.26","date":"2026-11-15","changes":["Added the Ko-fi badge and instructions for finding Naver News publisher IDs to both READMEs."]}
 {"version":"dev-0.1.27","date":"2026-11-15","changes":["Aligned the Korean README installation badge with the Home Assistant Marketplace badge in the English README."]}
+{"version":"dev-0.1.28","date":"2026-11-15","changes":["Added the Marketplace validation workflow with HACS and hassfest checks."]}

@@ -2,6 +2,9 @@
 
 ```text
 .
+├── .github/
+│   └── workflows/
+│       └── marketplace.yml
 ├── README.md
 ├── README.ko.md
 ├── hacs.json
