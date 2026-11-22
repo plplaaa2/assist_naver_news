@@ -15,6 +15,7 @@ Copyright in each news article belongs to its respective publisher.
 - Register multiple Naver News publishers and enable each as a separate Assist tool provider.
 - Hear original headlines and short summaries in a calm news anchor style by default. You can also request a different delivery style.
 - Briefings cover who, what, when, where, why, and how whenever the article provides those details.
+- By default, briefings include every returned article in order. Requests for a smaller number or a specific selection take precedence.
 - Ask for article links when you want them.
 
 ## Installation
