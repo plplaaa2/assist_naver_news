@@ -35,6 +35,7 @@ from .const import (
     NEWS_URL,
 )
 from .news import parse_article_body, parse_major_news
+from .search import SearchNewsTool, ReadSearchNewsTool
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -45,6 +46,8 @@ class AssistNewsAPI(API):
     def __init__(self, hass: HomeAssistant, entry: ConfigEntry) -> None:
         """Initialize this publisher's API."""
         self.entry = entry
+        # Keep search snapshots across API instances. Related: search.py.
+        self.search_results = {}
         press_id = entry.data[CONF_PRESS_ID]
         press_name = entry.data.get("press_name", f"언론사 {press_id}")
         super().__init__(
@@ -79,7 +82,9 @@ class AssistNewsAPI(API):
             tools=[
                 GetMajorNewsTool(
                     press_id, press_name, news_count, body_chars, briefing_chars
-                )
+                ),
+                SearchNewsTool(press_id, press_name, self.search_results),
+                ReadSearchNewsTool(press_id, self.search_results),
             ],
         )
 
@@ -106,10 +111,18 @@ class GetMajorNewsTool(Tool):
         self.briefing_chars = briefing_chars
         self.name = f"{DOMAIN}__get_{press_id}_major_news"
         self.title = f"{press_name} 주요 뉴스"
-        # Guide spoken briefs using the five Ws and one H. Related: README.md, README.ko.md.
+        # Guide complete briefs using the five Ws and one H. Related: README.md.
         self.description = (
             f"Fetch up to {news_count} major news articles from Naver {press_name}. "
             f"Each article includes its original title, time, and body (up to {body_chars:,} characters). "
+            "Check the returned count and articles list before composing the briefing. "
+            "Unless the user explicitly requests a smaller number or a filtered selection, "
+            "brief every returned article exactly once in the order provided. "
+            "Do not interpret 'major news' as permission to select only a subset. "
+            "If the user specifies a number, brief that many articles, or all available "
+            "articles if fewer were returned, preserving their order. "
+            "Keep each summary concise so that all required articles are covered, "
+            "and check that none were accidentally omitted before finishing. "
             "Use each title exactly as provided; do not paraphrase or edit it. "
             f"Summarize only the body in about {briefing_chars:,} Korean characters or fewer. "
             "For each briefing, cover who, what, when, where, why, and how "

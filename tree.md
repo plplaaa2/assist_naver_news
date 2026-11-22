@@ -7,7 +7,6 @@
 │       └── marketplace.yml
 ├── LICENSE
 ├── README.md
-├── README.ko.md
 ├── hacs.json
 ├── tree.md
 └── custom_components/
@@ -20,6 +19,7 @@
         │   └── icon.png
         ├── manifest.json
         ├── news.py
+        ├── search.py
         └── strings.json
 ```
 
