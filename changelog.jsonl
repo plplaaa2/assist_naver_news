@@ -34,3 +34,4 @@
 {"version":"dev-0.1.33","date":"2026-11-22","changes":["Required complete ordered briefings of returned articles by default while honoring explicit requests for fewer or filtered articles."]}
 {"version":"dev-0.1.34","date":"2026-11-22","changes":["Consolidated documentation into the Korean README.md and removed the separate localized README."]}
 {"version":"dev-0.1.35","date":"2026-11-22","changes":["Added publisher-filtered news search with up to three numbered results and snapshot-based selected-article summaries of about 500 Korean characters."]}
+{"version":"dev-0.1.36","date":"2026-11-22","changes":["Documented the Edge TTS fork with streaming fixes for long spoken news briefings."]}

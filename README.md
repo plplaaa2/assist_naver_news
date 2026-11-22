@@ -32,6 +32,12 @@ HACS에서 직접 추가하려면 [Assist News 저장소](https://github.com/plp
 
 ## 설정
 
+### Edge TTS 음성 브리핑
+
+Edge TTS로 긴 뉴스 브리핑을 들으려면 스트리밍 개선이 적용된 포크를 사용하세요. 기존 Edge TTS에서는 도입부 이후 긴 무음이나 재생 중단이 발생할 수 있으며, 이 프로젝트의 테스트 환경에서는 수정한 포크로 정상 재생을 확인했습니다. [수정된 Edge TTS 저장소](https://github.com/plplaaa2/hass-edge-tts)
+
+HACS 사용자 지정 저장소에 위 포크를 **통합** 유형으로 등록해 스트리밍 개선이 포함된 버전을 설치하고, Home Assistant를 재시작한 뒤 사용하는 Assist 파이프라인의 TTS 엔진을 **Edge TTS**로 선택하세요.
+
 ### 네이버 뉴스 언론사 번호 찾기
 
 1. [네이버 뉴스 언론사 목록](https://media.naver.com/press)에서 원하는 언론사의 이름이나 로고를 누릅니다.
