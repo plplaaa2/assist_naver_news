@@ -19,6 +19,7 @@
         │   └── icon.png
         ├── manifest.json
         ├── news.py
+        ├── search.py
         └── strings.json
 ```
 

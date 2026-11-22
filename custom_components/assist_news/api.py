@@ -35,6 +35,7 @@ from .const import (
     NEWS_URL,
 )
 from .news import parse_article_body, parse_major_news
+from .search import SearchNewsTool, ReadSearchNewsTool
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -45,6 +46,8 @@ class AssistNewsAPI(API):
     def __init__(self, hass: HomeAssistant, entry: ConfigEntry) -> None:
         """Initialize this publisher's API."""
         self.entry = entry
+        # Keep search snapshots across API instances. Related: search.py.
+        self.search_results = {}
         press_id = entry.data[CONF_PRESS_ID]
         press_name = entry.data.get("press_name", f"언론사 {press_id}")
         super().__init__(
@@ -79,7 +82,9 @@ class AssistNewsAPI(API):
             tools=[
                 GetMajorNewsTool(
                     press_id, press_name, news_count, body_chars, briefing_chars
-                )
+                ),
+                SearchNewsTool(press_id, press_name, self.search_results),
+                ReadSearchNewsTool(press_id, self.search_results),
             ],
         )
 
