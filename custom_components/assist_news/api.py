@@ -106,7 +106,7 @@ class GetMajorNewsTool(Tool):
         self.briefing_chars = briefing_chars
         self.name = f"{DOMAIN}__get_{press_id}_major_news"
         self.title = f"{press_name} 주요 뉴스"
-        # Guide complete briefs using the five Ws and one H. Related: README.md, README.ko.md.
+        # Guide complete briefs using the five Ws and one H. Related: README.md.
         self.description = (
             f"Fetch up to {news_count} major news articles from Naver {press_name}. "
             f"Each article includes its original title, time, and body (up to {body_chars:,} characters). "
